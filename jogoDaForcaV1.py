@@ -38,3 +38,24 @@ def jogo():
 
     # listagem de letras erradas:
     letrasErradas = []
+
+    # loop while
+    # ...enquanto o número de chances for maior do que zero:
+    while chances > 0:
+        print(" ".join(letrasPropostas))
+        print("\nChances restantes:", chances)
+        print("Letras erradas:", " ".join(letrasErradas))
+
+        tentativa = input("\nDigite uma letra: ").lower()
+
+        if tentativa in palavraAleatoria:
+            indice = 0
+
+            for letra in palavraAleatoria:
+                if tentativa == letra:
+                    letrasPropostas[indice] = letra
+                indice += 1
+
+        else:
+            chances -= 1
+            letrasErradas.append(tentativa)
