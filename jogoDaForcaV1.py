@@ -59,3 +59,15 @@ def jogo():
         else:
             chances -= 1
             letrasErradas.append(tentativa)
+
+        if "_" not in letrasPropostas:
+            print("\nVocê é muito foda, descobriu a palavra:", palavraAleatoria)
+            break
+
+    if "_" in letrasPropostas:
+        print("\nBicho, você se fodeu. A palavra era:", palavraAleatoria)
+
+# bloco main:
+if __name__ == "__main__":
+    jogo()
+    print("\nParabéns Danilo. Você (eu, no caso) está aprendendo programação em Python com a DSA. :)\n")
